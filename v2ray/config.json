@@ -1,25 +1,26 @@
 {
-  "inbounds": [
-    {
-      "port": 8080,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "8c35bef3-d51f-41ab-ac87-7b053410495b",
-            "alterId": 64
-          }
-        ]
-      },
-      "streamSettings": {
-        "network":"ws"
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
-    }
-  ]
+    "inbound": {
+        "port": 8080,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+                {
+                    "id": "5ed1ad68-6337-4fdb-a34b-f57e0b96ddbc",
+                    "alterId": 64,
+                }
+            ]
+        },
+        "streamSettings": {
+            "network": "ws",
+            "wsSettings": {
+                "path": "/phpmyadmin"
+            }
+        }
+    },
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ]
 }
